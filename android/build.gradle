@@ -9,7 +9,6 @@
 // * https://github.com/facebook/react-native/blob/0.60-stable/template/android/app/build.gradle
 //   original location:
 //   - https://github.com/facebook/react-native/blob/0.58-stable/local-cli/templates/HelloWorld/android/app/build.gradle
-
 def DEFAULT_COMPILE_SDK_VERSION = 29
 def DEFAULT_BUILD_TOOLS_VERSION = '29.0.3'
 def DEFAULT_MIN_SDK_VERSION = 21
@@ -75,7 +74,7 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'  // From node_modules
 
     // 支付宝 SDK AAR 包所需的配置
-    implementation fileTree(dir: "libs", include: ["*.aar"])
+    implementation project(path: ':alipaysdk')
 }
 
 def configureReactNativePom(def pom) {
